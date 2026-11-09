@@ -1,0 +1,23 @@
+
+# Configuration principale du projet Movie Recommendation
+
+paths:
+  data_raw: data/raw
+  movielens: data/raw/movielens
+  tmdb: data/raw/tmdb
+  posters: data/raw/posters
+  data_processed: data/processed
+  logs: logs
+
+movielens:
+  version: ml-latest-small
+
+tmdb:
+  api_url: https://api.themoviedb.org/3
+  poster_base_url: https://image.tmdb.org/t/p/w342
+  language: en-US
+  max_concurrency: 20
+
+pipeline:
+  random_seed: 42
+  test_limit: 100
